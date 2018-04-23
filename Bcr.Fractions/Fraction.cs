@@ -79,6 +79,19 @@ namespace Bcr.Fractions
             }
         }
 
+        // https://stackoverflow.com/questions/18541832/c-sharp-find-the-greatest-common-divisor
+        private static int gcd(int a, int b)
+        {
+            return b == 0 ? a : gcd(b, a % b);
+        }
+
+        public void LowestTermify()
+        {
+            var divisor = gcd(Numerator, (int) Denominator);
+            Numerator /= divisor;
+            Denominator /= (uint) divisor;
+        }
+
         // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
 
         public static Fraction operator *(Fraction f1, Fraction f2)
