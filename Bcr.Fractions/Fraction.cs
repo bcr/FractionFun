@@ -99,6 +99,11 @@ namespace Bcr.Fractions
             return new Fraction { Numerator = f1.Numerator * f2.Numerator, Denominator = f1.Denominator * f2.Denominator };
         }
 
+        public static Fraction operator /(Fraction f1, Fraction f2)
+        {
+            return new Fraction { Numerator = f1.Numerator * (int) f2.Denominator, Denominator = (uint) (f2.Numerator * (int) f1.Denominator) };
+        }
+
         public static Fraction operator +(Fraction f1, Fraction f2)
         {
             return new Fraction { Numerator = (f1.Numerator * (int) f2.Denominator) + (f2.Numerator * (int) f1.Denominator), Denominator = f1.Denominator * f2.Denominator };
