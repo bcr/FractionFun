@@ -19,5 +19,13 @@ namespace Bcr.Fractions.Test
             Assert.AreEqual(3, fraction.Numerator);
             Assert.AreEqual((uint) 4, fraction.Denominator);
         }
+
+        [TestMethod]
+        public void TestFromStringMixedNumber()
+        {
+            var fraction = Fraction.FromString("3_3/4");
+            Assert.AreEqual(15, fraction.Numerator);
+            Assert.AreEqual((uint) 4, fraction.Denominator);
+        }
     }
 }

@@ -9,8 +9,28 @@ namespace Bcr.Fractions
 
         public static Fraction FromString(string mixedFractionString)
         {
+            int whole;
+            int numerator;
+            uint denominator;
+
+            var wholeFraction = mixedFractionString.Split('_');
+
+            if (wholeFraction.Length > 1)
+            {
+                whole = int.Parse(wholeFraction[0]);
+                mixedFractionString = wholeFraction[1];
+            }
+            else
+            {
+                whole = 0;
+            }
+
             var numeratorDenominator = mixedFractionString.Split('/');
-            return new Fraction { Numerator = int.Parse(numeratorDenominator[0]), Denominator = uint.Parse(numeratorDenominator[1])};
+
+            denominator = uint.Parse(numeratorDenominator[1]);
+            numerator = (whole * (int) denominator) + int.Parse(numeratorDenominator[0]);
+
+            return new Fraction { Numerator = numerator, Denominator = denominator};
         }
     }
 }
