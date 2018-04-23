@@ -56,5 +56,10 @@ namespace Bcr.Fractions
 
             return (Numerator == otherFraction.Numerator) && (Denominator == otherFraction.Denominator);
         }
+
+        public override string ToString()
+        {
+            return $"{Numerator}/{Denominator}";
+        }
     }
 }

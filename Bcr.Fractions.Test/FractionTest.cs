@@ -55,5 +55,11 @@ namespace Bcr.Fractions.Test
 
             AreEqualAndUnequal(fraction, equalFraction, unequalFraction);
         }
+
+        [TestMethod]
+        public void TestToString()
+        {
+            Assert.AreEqual("1/4", new Fraction { Numerator = 1, Denominator = 4 }.ToString());
+        }
     }
 }
