@@ -20,3 +20,7 @@
     = 3_1/2
     */
 ```
+
+`$ dotnet new library -o Bcr.Fractions`
+`$ dotnet new mstest -o Bcr.Fractions.Test`
+`$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
