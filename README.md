@@ -21,6 +21,18 @@
     */
 ```
 
+## Setting up the projects
+
 `$ dotnet new library -o Bcr.Fractions`
 `$ dotnet new mstest -o Bcr.Fractions.Test`
 `$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
+`$ dotnet new console -o Bcr.Fractions.CommandLine`
+`$ dotnet add Bcr.Fractions.CommandLine/Bcr.Fractions.CommandLine.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
+
+## Run the console app
+
+`dotnet run --project Bcr.Fractions.CommandLine`
+
+## Run the unit tests
+
+`dotnet test Bcr.Fractions.Test`
