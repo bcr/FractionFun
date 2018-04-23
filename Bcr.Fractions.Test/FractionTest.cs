@@ -73,5 +73,13 @@ namespace Bcr.Fractions.Test
         {
             Assert.AreEqual("5", new Fraction { Numerator = 5, Denominator = 1 }.ToString());
         }
+
+        [TestMethod]
+        public void TestMultiplyOperator()
+        {
+            var term1 = new Fraction { Numerator = 1, Denominator = 4 };
+            var term2 = new Fraction { Numerator = 1, Denominator = 2 };
+            Assert.AreEqual(new Fraction { Numerator = 1, Denominator = 8 }, term1 * term2);
+        }
     }
 }

@@ -78,5 +78,12 @@ namespace Bcr.Fractions
                 return $"{Numerator}/{Denominator}";
             }
         }
+
+        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
+
+        public static Fraction operator *(Fraction f1, Fraction f2)
+        {
+            return new Fraction { Numerator = f1.Numerator * f2.Numerator, Denominator = f1.Denominator * f2.Denominator };
+        }
     }
 }
