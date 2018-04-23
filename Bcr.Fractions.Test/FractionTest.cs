@@ -23,24 +23,21 @@ namespace Bcr.Fractions.Test
         public void TestFromStringBasic()
         {
             var fraction = Fraction.FromString("3/4");
-            Assert.AreEqual(3, fraction.Numerator);
-            Assert.AreEqual((uint) 4, fraction.Denominator);
+            Assert.AreEqual(fraction, new Fraction { Numerator = 3, Denominator = 4 });
         }
 
         [TestMethod]
         public void TestFromStringMixedNumber()
         {
             var fraction = Fraction.FromString("3_3/4");
-            Assert.AreEqual(15, fraction.Numerator);
-            Assert.AreEqual((uint) 4, fraction.Denominator);
+            Assert.AreEqual(fraction, new Fraction { Numerator = 15, Denominator = 4 });
         }
 
         [TestMethod]
         public void TestFromStringWholeNumber()
         {
             var fraction = Fraction.FromString("3");
-            Assert.AreEqual(3, fraction.Numerator);
-            Assert.AreEqual((uint) 1, fraction.Denominator);
+            Assert.AreEqual(fraction, new Fraction { Numerator = 3, Denominator = 1 });
         }
 
         [TestMethod]
