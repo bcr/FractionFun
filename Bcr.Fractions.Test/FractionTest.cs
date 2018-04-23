@@ -67,5 +67,11 @@ namespace Bcr.Fractions.Test
         {
             Assert.AreEqual("1_1/4", new Fraction { Numerator = 5, Denominator = 4 }.ToString());
         }
+
+        [TestMethod]
+        public void TestWholeNumberToString()
+        {
+            Assert.AreEqual("5", new Fraction { Numerator = 5, Denominator = 1 }.ToString());
+        }
     }
 }

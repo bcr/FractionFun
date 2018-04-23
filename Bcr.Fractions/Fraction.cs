@@ -64,7 +64,14 @@ namespace Bcr.Fractions
                 var whole = Numerator/Denominator;
                 var numerator = Numerator - (whole * Denominator);
 
-                return $"{whole}_{numerator}/{Denominator}";
+                if (numerator > 0)
+                {
+                    return $"{whole}_{numerator}/{Denominator}";
+                }
+                else
+                {
+                    return $"{whole}";
+                }
             }
             else
             {
