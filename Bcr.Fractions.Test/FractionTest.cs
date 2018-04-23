@@ -81,5 +81,13 @@ namespace Bcr.Fractions.Test
             var term2 = new Fraction { Numerator = 1, Denominator = 2 };
             Assert.AreEqual(new Fraction { Numerator = 1, Denominator = 8 }, term1 * term2);
         }
+
+        [TestMethod]
+        public void TestAddOperator()
+        {
+            var term1 = new Fraction { Numerator = 1, Denominator = 8 };
+            var term2 = new Fraction { Numerator = 1, Denominator = 4 };
+            Assert.AreEqual(new Fraction { Numerator = 12, Denominator = 32 }, term1 + term2);
+        }
     }
 }
