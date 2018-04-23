@@ -27,6 +27,14 @@ namespace Bcr.Fractions
                 case "+":
                     result = term1 + term2;
                     break;
+
+                case "-":
+                    result = term1 - term2;
+                    break;
+
+                case "/":
+                    result = term1 / term2;
+                    break;
             }
 
             result.LowestTermify();
