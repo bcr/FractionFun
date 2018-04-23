@@ -27,5 +27,13 @@ namespace Bcr.Fractions.Test
             Assert.AreEqual(15, fraction.Numerator);
             Assert.AreEqual((uint) 4, fraction.Denominator);
         }
+
+        [TestMethod]
+        public void TestFromStringWholeNumber()
+        {
+            var fraction = Fraction.FromString("3");
+            Assert.AreEqual(3, fraction.Numerator);
+            Assert.AreEqual((uint) 1, fraction.Denominator);
+        }
     }
 }

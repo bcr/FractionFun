@@ -27,8 +27,20 @@ namespace Bcr.Fractions
 
             var numeratorDenominator = mixedFractionString.Split('/');
 
-            denominator = uint.Parse(numeratorDenominator[1]);
-            numerator = (whole * (int) denominator) + int.Parse(numeratorDenominator[0]);
+            numerator = int.Parse(numeratorDenominator[0]);
+
+            if (numeratorDenominator.Length > 1)
+            {
+                denominator = uint.Parse(numeratorDenominator[1]);
+            }
+            else
+            {
+                whole = numerator;
+                numerator = 0;
+                denominator = 1;
+            }
+
+            numerator += (whole * (int) denominator);
 
             return new Fraction { Numerator = numerator, Denominator = denominator};
         }
