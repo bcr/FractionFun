@@ -11,5 +11,13 @@ namespace Bcr.Fractions.Test
         {
             var fraction = new Fraction { Numerator = 1, Denominator = 1 };
         }
+
+        [TestMethod]
+        public void TestFromStringBasic()
+        {
+            var fraction = Fraction.FromString("3/4");
+            Assert.AreEqual(3, fraction.Numerator);
+            Assert.AreEqual((uint) 4, fraction.Denominator);
+        }
     }
 }
