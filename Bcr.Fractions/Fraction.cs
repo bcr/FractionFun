@@ -44,5 +44,17 @@ namespace Bcr.Fractions
 
             return new Fraction { Numerator = numerator, Denominator = denominator};
         }
+
+        public override int GetHashCode()
+        {
+            return Numerator.GetHashCode() + Denominator.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var otherFraction = obj as Fraction;
+
+            return (Numerator == otherFraction.Numerator) && (Denominator == otherFraction.Denominator);
+        }
     }
 }
