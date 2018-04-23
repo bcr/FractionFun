@@ -59,7 +59,17 @@ namespace Bcr.Fractions
 
         public override string ToString()
         {
-            return $"{Numerator}/{Denominator}";
+            if (Numerator > Denominator)
+            {
+                var whole = Numerator/Denominator;
+                var numerator = Numerator - (whole * Denominator);
+
+                return $"{whole}_{numerator}/{Denominator}";
+            }
+            else
+            {
+                return $"{Numerator}/{Denominator}";
+            }
         }
     }
 }

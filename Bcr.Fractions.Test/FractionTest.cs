@@ -61,5 +61,11 @@ namespace Bcr.Fractions.Test
         {
             Assert.AreEqual("1/4", new Fraction { Numerator = 1, Denominator = 4 }.ToString());
         }
+
+        [TestMethod]
+        public void TestMixedNumberToString()
+        {
+            Assert.AreEqual("1_1/4", new Fraction { Numerator = 5, Denominator = 4 }.ToString());
+        }
     }
 }
