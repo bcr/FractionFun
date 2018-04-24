@@ -4,7 +4,7 @@ namespace Bcr.Fractions
     {
         public static string Evaluate(string expression)
         {
-            var parsedExpression = expression.Split(' ');
+            var parsedExpression = System.Text.RegularExpressions.Regex.Split(expression, @"\s+");
 
             // Expression syntax is:
             //

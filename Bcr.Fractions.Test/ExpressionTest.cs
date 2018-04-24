@@ -41,5 +41,12 @@ namespace Bcr.Fractions.Test
         {
             Assert.AreEqual("= 7_1/2", Expression.Evaluate("? 3_3/4 / 1/2"));
         }
+
+        [TestMethod]
+        public void TestOneOrMoreSpaces()
+        {
+            // Operands and operators shall be separated by one or more spaces.
+            Assert.AreEqual("= 1_7/8", Expression.Evaluate("?     1/2      *     3_3/4"));
+        }
     }
 }
