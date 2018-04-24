@@ -91,7 +91,7 @@ namespace Bcr.Fractions
 
         public void LowestTermify()
         {
-            var divisor = gcd(Numerator, (int) Denominator);
+            var divisor = gcd(System.Math.Abs(Numerator), (int) Denominator);
             Numerator /= divisor;
             Denominator /= (uint) divisor;
         }

@@ -146,5 +146,13 @@ namespace Bcr.Fractions.Test
             fraction.LowestTermify();
             Assert.AreEqual(new Fraction { Numerator = 1, Denominator = 2 }, fraction);
         }
+
+        [TestMethod]
+        public void TestLowestTermifyNegative()
+        {
+            var fraction = new Fraction { Numerator = -2, Denominator = 4 };
+            fraction.LowestTermify();
+            Assert.AreEqual(new Fraction { Numerator = -1, Denominator = 2 }, fraction);
+        }
     }
 }
