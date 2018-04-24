@@ -41,6 +41,27 @@ namespace Bcr.Fractions.Test
         }
 
         [TestMethod]
+        public void TestFromStringNegativeBasic()
+        {
+            var fraction = Fraction.FromString("-3/4");
+            Assert.AreEqual(fraction, new Fraction { Numerator = -3, Denominator = 4 });
+        }
+
+        [TestMethod]
+        public void TestFromStringNegativeMixedNumber()
+        {
+            var fraction = Fraction.FromString("-3_3/4");
+            Assert.AreEqual(fraction, new Fraction { Numerator = -15, Denominator = 4 });
+        }
+
+        [TestMethod]
+        public void TestFromStringNegativeWholeNumber()
+        {
+            var fraction = Fraction.FromString("-3");
+            Assert.AreEqual(fraction, new Fraction { Numerator = -3, Denominator = 1 });
+        }
+
+        [TestMethod]
         public void TestAreEqualAndUnequal()
         {
             AreEqualAndUnequal("a", "a", "b");

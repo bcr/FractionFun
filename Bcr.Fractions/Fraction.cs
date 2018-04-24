@@ -28,6 +28,10 @@ namespace Bcr.Fractions
             var numeratorDenominator = mixedFractionString.Split('/');
 
             numerator = int.Parse(numeratorDenominator[0]);
+            if (whole < 0)
+            {
+                numerator = -numerator;
+            }
 
             if (numeratorDenominator.Length > 1)
             {
