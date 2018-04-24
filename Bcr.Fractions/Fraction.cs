@@ -63,14 +63,14 @@ namespace Bcr.Fractions
 
         public override string ToString()
         {
-            if (Numerator > Denominator)
+            if (System.Math.Abs(Numerator) > Denominator)
             {
                 var whole = Numerator/Denominator;
                 var numerator = Numerator - (whole * Denominator);
 
-                if (numerator > 0)
+                if (numerator != 0)
                 {
-                    return $"{whole}_{numerator}/{Denominator}";
+                    return $"{whole}_{System.Math.Abs(numerator)}/{Denominator}";
                 }
                 else
                 {
