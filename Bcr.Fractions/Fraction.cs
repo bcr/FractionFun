@@ -49,9 +49,18 @@ namespace Bcr.Fractions
             return new Fraction { Numerator = numerator, Denominator = denominator};
         }
 
+        // https://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode
+
         public override int GetHashCode()
         {
-            return Numerator.GetHashCode() + Denominator.GetHashCode();
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 17;
+                // Suitable nullity checks etc, of course :)
+                hash = hash * 23 + Numerator.GetHashCode();
+                hash = hash * 23 + Denominator.GetHashCode();
+                return hash;
+            }
         }
 
         public override bool Equals(object obj)
