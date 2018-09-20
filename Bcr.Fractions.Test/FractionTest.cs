@@ -96,6 +96,18 @@ namespace Bcr.Fractions.Test
         }
 
         [TestMethod]
+        public void TestWholeNumberOneToString()
+        {
+            Assert.AreEqual("1", new Fraction { Numerator = 1, Denominator = 1 }.ToString());
+        }
+
+        [TestMethod]
+        public void TestWholeNumberZeroToString()
+        {
+            Assert.AreEqual("0", new Fraction { Numerator = 0, Denominator = 1 }.ToString());
+        }
+
+        [TestMethod]
         public void TestNegativeMixedNumberToString()
         {
             Assert.AreEqual("-1_1/4", new Fraction { Numerator = -5, Denominator = 4 }.ToString());

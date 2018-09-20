@@ -72,7 +72,7 @@ namespace Bcr.Fractions
 
         public override string ToString()
         {
-            if (System.Math.Abs(Numerator) > Denominator)
+            if ((System.Math.Abs(Numerator) >= Denominator) || (Numerator == 0))
             {
                 var whole = Numerator/Denominator;
                 var numerator = Numerator - (whole * Denominator);
