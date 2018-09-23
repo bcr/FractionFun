@@ -73,8 +73,10 @@ namespace Bcr.Fractions.Test
             var fraction = new Fraction { Numerator = 1, Denominator = 4 };
             var equalFraction = new Fraction { Numerator = 1, Denominator = 4 };
             var unequalFraction = new Fraction { Numerator = 1, Denominator = 5 };
+            var otherUnequalFraction = new Fraction { Numerator = 2, Denominator = 4 };
 
             AreEqualAndUnequal(fraction, equalFraction, unequalFraction);
+            AreEqualAndUnequal(fraction, equalFraction, otherUnequalFraction);
         }
 
         [TestMethod]
