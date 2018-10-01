@@ -21,15 +21,6 @@
     */
 ```
 
-## Setting up the projects
-
-`$ dotnet new library -o Bcr.Fractions`
-`$ dotnet new mstest -o Bcr.Fractions.Test`
-`$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
-`$ dotnet new console -o Bcr.Fractions.CommandLine`
-`$ dotnet add Bcr.Fractions.CommandLine/Bcr.Fractions.CommandLine.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
-`$ dotnet add Bcr.Fractions.Test package coverlet.msbuild`
-
 ## Run the console app
 
 `dotnet run --project Bcr.Fractions.CommandLine`
@@ -57,3 +48,14 @@ This puts the coverage data into `Bcr.Fractions.Test/coverage.opencover.xml`
 Then you can generate the coverage output with:
 
 `reportgenerator -reports:Bcr.Fractions.Test/coverage.opencover.xml -targetdir:Coverage`
+
+## How I set up my original projects
+
+This is how I set up my original projects. Purely informational, you don't have to do this.
+
+`$ dotnet new library -o Bcr.Fractions`
+`$ dotnet new mstest -o Bcr.Fractions.Test`
+`$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
+`$ dotnet new console -o Bcr.Fractions.CommandLine`
+`$ dotnet add Bcr.Fractions.CommandLine/Bcr.Fractions.CommandLine.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
+`$ dotnet add Bcr.Fractions.Test package coverlet.msbuild`
