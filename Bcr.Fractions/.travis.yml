@@ -1,2 +1,4 @@
 language: csharp
 dotnet: 2.1
+script:
+  - dotnet test Bcr.Fractions.Test
