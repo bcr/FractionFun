@@ -53,9 +53,11 @@ Then you can generate the coverage output with:
 
 This is how I set up my original projects. Purely informational, you don't have to do this.
 
-`$ dotnet new library -o Bcr.Fractions`
-`$ dotnet new mstest -o Bcr.Fractions.Test`
-`$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
-`$ dotnet new console -o Bcr.Fractions.CommandLine`
-`$ dotnet add Bcr.Fractions.CommandLine/Bcr.Fractions.CommandLine.csproj reference Bcr.Fractions/Bcr.Fractions.csproj`
-`$ dotnet add Bcr.Fractions.Test package coverlet.msbuild`
+```bash
+$ dotnet new library -o Bcr.Fractions
+$ dotnet new mstest -o Bcr.Fractions.Test
+$ dotnet add Bcr.Fractions.Test/Bcr.Fractions.Test.csproj reference Bcr.Fractions/Bcr.Fractions.csproj
+$ dotnet new console -o Bcr.Fractions.CommandLine
+$ dotnet add Bcr.Fractions.CommandLine/Bcr.Fractions.CommandLine.csproj reference Bcr.Fractions/Bcr.Fractions.csproj
+$ dotnet add Bcr.Fractions.Test package coverlet.msbuild
+```
